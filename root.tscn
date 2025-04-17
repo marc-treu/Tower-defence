@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cohpfa41r05d1" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png" id="2_pyidc"]
 [ext_resource type="Script" uid="uid://cybww026fubme" path="res://path_spawner.gd" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://k7octoog0en0" path="res://tower.tscn" id="4_28aoi"]
-[ext_resource type="Script" uid="uid://c33vu7xhbgg7e" path="res://timer.gd" id="4_jnlp7"]
+[ext_resource type="Script" path="res://timer.gd" id="4_jnlp7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvh5c"]
 texture = ExtResource("2_pyidc")
