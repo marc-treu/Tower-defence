@@ -1,15 +1,15 @@
 extends CharacterBody2D
 
-
+var type: String = "TOWER"
 var targets = []
 var cur_target = null
-var damage: int = 15
+var damage: int = 5
 var cool_down: int = 10
 var cur_cool_down: int = 0
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body != self:
+	if body.type != "TOWER":
 		targets.append(body)
 		
 

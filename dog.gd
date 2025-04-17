@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
+var DamageLabelScene = preload("res://damage_label.tscn")
+
+var type: String = "ENEMY"
 @export var speed = 0.1
 @export var ratio = 0
-var heath = 100
+var health = 100
 
 func rand_normal(mean: float = 0.1, stddev: float = 0.01) -> float:
 	var u1 = randf()
@@ -13,10 +16,21 @@ func rand_normal(mean: float = 0.1, stddev: float = 0.01) -> float:
 func _ready() -> void:
 	self.speed = rand_normal()
 
-func take_damage(damage):
-	self.heath -= damage
-	if self.heath <= 0:
+func take_damage(damage: int):
+	self.health -= damage
+	update_health_bar()
+	show_damage_number(damage)
+	if self.health <= 0:
 		self.queue_free()
+
+func show_damage_number(amount: int):
+	var label = DamageLabelScene.instantiate()
+	get_tree().current_scene.add_child(label)  # Add to root so it floats in screen space
+	label.show_damage(amount, global_position)
+
+func update_health_bar():
+	var bar = $HealthBar
+	bar.value = self.health
 
 func _physics_process(delta):
 	ratio = get_parent().get_progress_ratio()

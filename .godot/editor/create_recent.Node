@@ -1,3 +1,5 @@
+Label
+ProgressBar
 CollisionShape2D
 Area2D
 Marker2D
@@ -10,4 +12,3 @@ Path2D
 Node2D
 PathFollow2D
 TileMap
-TextureRect

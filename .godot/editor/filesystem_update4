@@ -4,3 +4,7 @@ res://chien.tscn
 res://stage1.tscn
 res://tower.tscn
 res://tower.gd
+res://dog.tscn
+res://dog.gd
+res://damage_label.gd
+res://damage_label.tscn

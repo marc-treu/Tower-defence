@@ -300,4 +300,7 @@ script = ExtResource("4_jnlp7")
 [node name="tower" parent="." instance=ExtResource("4_28aoi")]
 position = Vector2(563, 184)
 
+[node name="tower2" parent="." instance=ExtResource("4_28aoi")]
+position = Vector2(779, 369)
+
 [connection signal="timeout" from="pathSpawner/Timer" to="pathSpawner" method="_on_timer_timeout"]
