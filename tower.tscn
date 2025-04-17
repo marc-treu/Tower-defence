@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://k7octoog0en0"]
+
+[ext_resource type="Texture2D" uid="uid://hotak0v6bnun" path="res://free-archer-towers-pixel-art-for-tower-defense/2 Idle/7.png" id="1_k1sas"]
+[ext_resource type="Script" uid="uid://wh6beivvfe23" path="res://tower.gd" id="1_vedim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1sas"]
+size = Vector2(46, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vedim"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(0, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stebd"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(70, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbe1c"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(140, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxmma"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(210, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lny5m"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(280, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ibu2"]
+atlas = ExtResource("1_k1sas")
+region = Rect2(350, 0, 70, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdbe0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vedim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stebd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbe1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxmma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lny5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ibu2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vedim"]
+radius = 130.501
+
+[node name="tower" type="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_vedim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 40)
+shape = SubResource("RectangleShape2D_k1sas")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tdbe0")
+autoplay = "default"
+frame_progress = 0.595369
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 26)
+
+[node name="col" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="col"]
+position = Vector2(0, 26)
+shape = SubResource("CircleShape2D_vedim")
+
+[connection signal="body_entered" from="col" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="col" to="." method="_on_area_2d_body_exited"]

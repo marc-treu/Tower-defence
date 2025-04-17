@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d50yh3lyrhjt"]
+
+[ext_resource type="PackedScene" uid="uid://b3ucymk06n2ng" path="res://chien.tscn" id="1_nwqcy"]
+
+[sub_resource type="Curve2D" id="Curve2D_vvh5c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1164, 353, 0, 0, 0, 0, -17, 356)
+}
+point_count = 2
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_vvh5c")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(1164, 353)
+rotation = 3.13905
+loop = false
+
+[node name="chien" parent="PathFollow2D" instance=ExtResource("1_nwqcy")]
+position = Vector2(-0.0304251, 12)
+rotation = -3.13905
+scale = Vector2(2, 2)

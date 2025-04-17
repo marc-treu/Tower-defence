@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://b3ucymk06n2ng"]
+
+[ext_resource type="Script" uid="uid://chmwmp0lpfakv" path="res://chien.gd" id="1_7jt25"]
+[ext_resource type="Texture2D" uid="uid://c4cw84p2geket" path="res://free-field-enemies-pixel-art-for-tower-defense/3/S_Walk.png" id="1_nb0at"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jt25"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52xt6"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj05o"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi2hd"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_angk7"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb0at"]
+atlas = ExtResource("1_nb0at")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ksf4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jt25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52xt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj05o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi2hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_angk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb0at")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jt25"]
+radius = 11.0
+
+[node name="chien" type="CharacterBody2D"]
+script = ExtResource("1_7jt25")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-25, -25)
+sprite_frames = SubResource("SpriteFrames_5ksf4")
+autoplay = "default"
+frame_progress = 0.717141
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_7jt25")
