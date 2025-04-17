@@ -9,6 +9,8 @@ var type: String = "ENEMY"
 @export var ratio = 0
 var health = 100
 @export var gold_reward = 10  # Add gold reward amount
+var path_follow = null
+
 
 func rand_normal(mean: float = 0.1, stddev: float = 0.01) -> float:
 	var u1 = randf()
@@ -17,6 +19,7 @@ func rand_normal(mean: float = 0.1, stddev: float = 0.01) -> float:
 	return clamp(z * stddev + mean, 0.001, 5)
 
 func _ready() -> void:
+	path_follow = get_parent()
 	self.speed = rand_normal()
 
 func take_damage(damage: int):
@@ -37,10 +40,9 @@ func update_health_bar():
 	bar.value = self.health
 
 func _physics_process(delta):
-	ratio = get_parent().get_progress_ratio()
+	ratio = path_follow.get_progress_ratio()
 	ratio += delta * speed
-	# ratio = ratio + delta * speed
-	get_parent().set_progress_ratio(ratio)
-	
+	path_follow.set_progress_ratio(ratio)
+
 	if ratio > 1:
 		queue_free()
