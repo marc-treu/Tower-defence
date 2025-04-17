@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d50yh3lyrhjt" path="res://stage1.tscn" id="3_l8v81"]
 [ext_resource type="Script" uid="uid://cybww026fubme" path="res://path_spawner.gd" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://k7octoog0en0" path="res://tower.tscn" id="4_28aoi"]
-[ext_resource type="Script" path="res://timer.gd" id="4_jnlp7"]
+[ext_resource type="Script" uid="uid://bikaa3p51vwul" path="res://player.gd" id="6_l8v81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvh5c"]
 texture = ExtResource("2_pyidc")
@@ -298,12 +298,14 @@ script = ExtResource("3_vvh5c")
 
 [node name="Timer" type="Timer" parent="pathSpawner"]
 autostart = true
-script = ExtResource("4_jnlp7")
 
 [node name="tower" parent="." instance=ExtResource("4_28aoi")]
 position = Vector2(563, 184)
 
 [node name="tower2" parent="." instance=ExtResource("4_28aoi")]
 position = Vector2(779, 369)
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("6_l8v81")
 
 [connection signal="timeout" from="pathSpawner/Timer" to="pathSpawner" method="_on_timer_timeout"]

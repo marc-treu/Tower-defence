@@ -1,7 +1,7 @@
 extends Node
 
 @onready var path = get_parent().get_node("Path2D")
-# @onready var path = get_parent().get_node("Player")
+@onready var player = get_parent().get_node("Player")
 @onready var EnemyScene = preload("res://dog.tscn")
 @onready var timer = $Timer
 
@@ -16,8 +16,8 @@ func spawn_enemy():
 	enemy.scale = Vector2(-2.0, -2.0)
 	
 	# Connect the enemy_killed signal if it exists
-	# if enemy.has_signal("enemy_killed"):
-	# 	enemy.enemy_killed.connect(player.add_money)
+	if enemy.has_signal("enemy_killed"):
+		enemy.enemy_killed.connect(player.add_money)
 
 func _on_timer_timeout() -> void:
 	spawn_enemy()
