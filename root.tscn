@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvvfqbbh5nyk8"]
+[gd_scene load_steps=9 format=3 uid="uid://bvvfqbbh5nyk8"]
 
 [ext_resource type="Texture2D" uid="uid://ld7iotxbbjk8" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTile_38.png" id="1_pq8q7"]
 [ext_resource type="Texture2D" uid="uid://cohpfa41r05d1" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png" id="2_pyidc"]
+[ext_resource type="PackedScene" uid="uid://d50yh3lyrhjt" path="res://stage1.tscn" id="3_l8v81"]
 [ext_resource type="Script" uid="uid://cybww026fubme" path="res://path_spawner.gd" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://k7octoog0en0" path="res://tower.tscn" id="4_28aoi"]
 [ext_resource type="Script" path="res://timer.gd" id="4_jnlp7"]
@@ -289,6 +290,8 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_28aoi")
 format = 2
 layer_0/tile_data = PackedInt32Array(720895, 0, 8, 786431, 0, 9, 655360, 65536, 8, 720896, 65536, 9, 655361, 131072, 8, 720897, 131072, 9, 655362, 196608, 8, 720898, 196608, 9, 655363, 262144, 8, 720899, 262144, 9, 655364, 327680, 8, 720900, 327680, 9, 655365, 393216, 8, 720901, 393216, 9, 655366, 458752, 8, 720902, 458752, 9, 655367, 524288, 8, 720903, 524288, 9, 655368, 589824, 8, 720904, 589824, 9, 655369, 0, 8, 720905, 0, 9, 655370, 65536, 8, 720906, 65536, 9, 655371, 131072, 8, 720907, 131072, 9, 655372, 196608, 8, 720908, 196608, 9, 655373, 262144, 8, 720909, 262144, 9, 655374, 327680, 8, 720910, 327680, 9, 655375, 393216, 8, 720911, 393216, 9, 655376, 458752, 8, 720912, 458752, 9, 655377, 524288, 8, 720913, 524288, 9, 655378, 0, 8, 720914, 0, 9, 655379, 65536, 8, 720915, 65536, 9, 655380, 131072, 8, 720916, 131072, 9, 655381, 196608, 8, 720917, 196608, 9, 655382, 262144, 8, 720918, 262144, 9, 655383, 327680, 8, 720919, 327680, 9, 655384, 393216, 8, 720920, 393216, 9, 655385, 458752, 8, 720921, 458752, 9, 655386, 524288, 8, 720922, 524288, 9, 655387, 0, 8, 720923, 0, 9, 655388, 65536, 8, 720924, 65536, 9, 655389, 131072, 8, 720925, 131072, 9, 655390, 196608, 8, 720926, 196608, 9, 655391, 262144, 8, 720927, 262144, 9, 655392, 327680, 8, 720928, 327680, 9, 655393, 393216, 8, 720929, 393216, 9, 655394, 458752, 8, 720930, 458752, 9, 655395, 524288, 8, 720931, 524288, 9, 655396, 589824, 8, 720932, 589824, 9)
+
+[node name="Path2D" parent="." instance=ExtResource("3_l8v81")]
 
 [node name="pathSpawner" type="Node2D" parent="."]
 script = ExtResource("3_vvh5c")

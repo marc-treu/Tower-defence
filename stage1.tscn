@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d50yh3lyrhjt"]
-
-[ext_resource type="PackedScene" uid="uid://b3ucymk06n2ng" path="res://dog.tscn" id="1_nwqcy"]
+[gd_scene load_steps=2 format=3 uid="uid://d50yh3lyrhjt"]
 
 [sub_resource type="Curve2D" id="Curve2D_vvh5c"]
 _data = {
@@ -15,8 +13,3 @@ curve = SubResource("Curve2D_vvh5c")
 position = Vector2(1164, 353)
 rotation = 3.13905
 loop = false
-
-[node name="dog" parent="PathFollow2D" instance=ExtResource("1_nwqcy")]
-position = Vector2(-0.0304251, 12)
-rotation = -3.13905
-scale = Vector2(2, 2)
