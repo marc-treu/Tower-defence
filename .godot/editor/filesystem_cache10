@@ -1,14 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744910483
-chien.gd::GDScript::5290293836259261217::1743977348::0::1::::<>CharacterBody2D<><>0<>0<><>::
-chien.tscn::PackedScene::4393160800584554276::1743978685::0::1::::<><><>0<>0<><>::uid://chmwmp0lpfakv::::res://chien.gd<>uid://c4cw84p2geket::::res://free-field-enemies-pixel-art-for-tower-defense/3/S_Walk.png
+::res://::1744912060
+chien.gd::GDScript::5290293836259261217::1744912042::0::1::::<>CharacterBody2D<><>0<>0<><>::
+chien.tscn::PackedScene::4393160800584554276::1744911987::0::1::::<><><>0<>0<><>::uid://chmwmp0lpfakv::::res://chien.gd<>uid://c4cw84p2geket::::res://free-field-enemies-pixel-art-for-tower-defense/3/S_Walk.png
 icon.svg::CompressedTexture2D/CompressedTexture2D::3821445432825427137::1743969734::1743969742::1::::<><><>0<>0<>e89488d0c9468bff6224281a72cd3d58<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 path_spawner.gd::GDScript/GDScript::6460814409969249328::1743974909::0::1::::<>Node2D<><>0<>0<><>::
-README.md::TextFile::-1::1744910301::0::1::::<><><>0<>0<><>::
-root.tscn::PackedScene::3904070545020178749::1743977991::0::1::::<><><>0<>0<><>::uid://ld7iotxbbjk8::::res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTile_38.png<>uid://cohpfa41r05d1::::res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png<>uid://cybww026fubme::::res://path_spawner.gd<>uid://k7octoog0en0::::res://tower.tscn
-stage1.tscn::PackedScene::274059058859282505::1743977992::0::1::::<><><>0<>0<><>::uid://b3ucymk06n2ng::::res://chien.tscn
-tower.gd::GDScript::1560489440319041114::1743977991::0::1::::<>CharacterBody2D<><>0<>0<><>::
-tower.tscn::PackedScene::768803154212793163::1743977696::0::1::::<><><>0<>0<><>::uid://hotak0v6bnun::::res://free-archer-towers-pixel-art-for-tower-defense/2 Idle/7.png<>uid://wh6beivvfe23::::res://tower.gd
+README.md::TextFile/TextFile::-1::1744910301::0::1::::<><><>0<>0<><>::
+root.tscn::PackedScene::3904070545020178749::1744911821::0::1::::<><><>0<>0<><>::uid://ld7iotxbbjk8::::res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTile_38.png<>uid://cohpfa41r05d1::::res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png<>uid://cybww026fubme::::res://path_spawner.gd<>uid://k7octoog0en0::::res://tower.tscn
+stage1.tscn::PackedScene::274059058859282505::1744911821::0::1::::<><><>0<>0<><>::uid://b3ucymk06n2ng::::res://chien.tscn
+tower.gd::GDScript::1560489440319041114::1744911975::0::1::::<>CharacterBody2D<><>0<>0<><>::
+tower.tscn::PackedScene::768803154212793163::1744911975::0::1::::<><><>0<>0<><>::uid://hotak0v6bnun::::res://free-archer-towers-pixel-art-for-tower-defense/2 Idle/7.png<>uid://wh6beivvfe23::::res://tower.gd
 ::res://free-archer-towers-pixel-art-for-tower-defense/::1743970028
 COUPON.png::CompressedTexture2D/CompressedTexture2D::5244558270338529164::1686658466::1743970028::1::::<><><>0<>0<>328b37931a9f071145374b920ef3c83a<>res://.godot/imported/COUPON.png-9c0643882b7f536c4b351366758bebc9.ctex::
 Font.png::CompressedTexture2D/CompressedTexture2D::8009187515236389234::1684839060::1743970028::1::::<><><>0<>0<>48cdad41c1eb3bb7fce0ccc32e98227e<>res://.godot/imported/Font.png-c535ff40b87a80c90e381eab42c44b29.ctex::

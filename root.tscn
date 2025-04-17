@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvvfqbbh5nyk8"]
+[gd_scene load_steps=8 format=3 uid="uid://bvvfqbbh5nyk8"]
 
 [ext_resource type="Texture2D" uid="uid://ld7iotxbbjk8" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTile_38.png" id="1_pq8q7"]
 [ext_resource type="Texture2D" uid="uid://cohpfa41r05d1" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png" id="2_pyidc"]
 [ext_resource type="Script" uid="uid://cybww026fubme" path="res://path_spawner.gd" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://k7octoog0en0" path="res://tower.tscn" id="4_28aoi"]
+[ext_resource type="Script" uid="uid://c33vu7xhbgg7e" path="res://timer.gd" id="4_jnlp7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvh5c"]
 texture = ExtResource("2_pyidc")
@@ -294,6 +295,7 @@ script = ExtResource("3_vvh5c")
 
 [node name="Timer" type="Timer" parent="pathSpawner"]
 autostart = true
+script = ExtResource("4_jnlp7")
 
 [node name="tower" parent="." instance=ExtResource("4_28aoi")]
 position = Vector2(563, 184)
