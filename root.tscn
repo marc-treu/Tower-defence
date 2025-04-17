@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvvfqbbh5nyk8"]
+[gd_scene load_steps=10 format=3 uid="uid://bvvfqbbh5nyk8"]
 
 [ext_resource type="Texture2D" uid="uid://ld7iotxbbjk8" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTile_38.png" id="1_pq8q7"]
 [ext_resource type="Texture2D" uid="uid://cohpfa41r05d1" path="res://free-fields-tileset-pixel-art-for-tower-defense/1 Tiles/FieldsTileset.png" id="2_pyidc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cybww026fubme" path="res://path_spawner.gd" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://k7octoog0en0" path="res://tower.tscn" id="4_28aoi"]
 [ext_resource type="Script" uid="uid://bikaa3p51vwul" path="res://player.gd" id="6_l8v81"]
+[ext_resource type="PackedScene" uid="uid://cwrirv30ruobk" path="res://player_ui.tscn" id="7_vyht1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvh5c"]
 texture = ExtResource("2_pyidc")
@@ -307,5 +308,7 @@ position = Vector2(779, 369)
 
 [node name="Player" type="Node" parent="."]
 script = ExtResource("6_l8v81")
+
+[node name="PlayerUI" parent="." instance=ExtResource("7_vyht1")]
 
 [connection signal="timeout" from="pathSpawner/Timer" to="pathSpawner" method="_on_timer_timeout"]

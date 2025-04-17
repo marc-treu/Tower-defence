@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwrirv30ruobk"]
+
+[ext_resource type="Script" uid="uid://docb65lumycy4" path="res://player_ui.gd" id="1_lwipk"]
+
+[node name="PlayerUI" type="CanvasLayer"]
+script = ExtResource("1_lwipk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Gold" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/HBoxContainer/Gold"]
+layout_mode = 2
+
+[node name="Health" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/HBoxContainer/Health"]
+layout_mode = 2
