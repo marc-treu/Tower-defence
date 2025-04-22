@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal enemy_killed(reward)  # Add this signal
+signal enemy_strike(attack_power)  # Add this signal
 
 var DamageLabelScene = preload("res://damage_label.tscn")
 
@@ -9,6 +10,7 @@ var type: String = "ENEMY"
 @export var ratio = 0
 var health = 100
 @export var gold_reward = 10  # Add gold reward amount
+@export var attack_power = 10  # Add gold reward amount
 var path_follow = null
 
 
@@ -45,4 +47,5 @@ func _physics_process(delta):
 	path_follow.set_progress_ratio(ratio)
 
 	if ratio > 1:
+		enemy_strike.emit(attack_power)  # Emit signal when killed
 		queue_free()

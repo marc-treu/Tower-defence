@@ -18,6 +18,7 @@ func spawn_enemy():
 	# Connect the enemy_killed signal if it exists
 	if enemy.has_signal("enemy_killed"):
 		enemy.enemy_killed.connect(player.add_money)
+		enemy.enemy_strike.connect(player.take_damage)
 
 func _on_timer_timeout() -> void:
 	spawn_enemy()

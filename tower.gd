@@ -19,14 +19,14 @@ func get_target():
 		if target.ratio > max_val:
 			max_val = target.ratio
 			cur_target = target
-	
+
 
 func _physics_process(delta):
 	if cur_cool_down == 0:
 		get_target()
 		if cur_target:
 			cur_target.take_damage(damage)
-			cur_cool_down = 10
+			cur_cool_down = cool_down
 	else:
 		cur_cool_down -= 1
 

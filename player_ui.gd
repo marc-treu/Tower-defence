@@ -16,4 +16,4 @@ func _on_gold_changed(new_amount):
 	gold_label.text = "Gold: $ " + str(new_amount)
 	
 func _on_health_changed(new_amount):
-	health_label.text = "Health: ❤️ " + str(new_amount)
+	health_label.text = "Health: <3 " + str(new_amount)

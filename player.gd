@@ -32,9 +32,8 @@ func can_afford(amount):
 
 func take_damage(amount):
 	health -= amount
+	print("Player received " + str(amount) + " of damage. Total: " + str(gold))
 	emit_signal("health_changed", health)
-	
-	# Check for game over
 	if health <= 0:
 		game_over()
 
